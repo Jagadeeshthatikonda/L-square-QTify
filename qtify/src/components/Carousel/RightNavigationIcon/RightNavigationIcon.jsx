@@ -12,7 +12,8 @@ const RightNavigationIcon = () => {
     swiper.on("slideChange", () => {
       setLastCardNotSwiped(swiper.isEnd);
     });
-  });
+  }, [swiper]);
+
   return (
     <div className={styles.moveToRight}>
       {!lastCardNotSwiped && <RightArrow onClick={() => swiper.slideNext()} />}
