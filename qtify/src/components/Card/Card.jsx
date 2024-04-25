@@ -3,10 +3,10 @@ import styles from "./Card.module.css";
 import { Chip } from "@mui/material";
 
 const Card = ({ data, type }) => {
-  const { image, follows, title } = data;
+  const { image, follows, title, songs } = data;
 
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.cardContainer} title={`${songs?.length} songs`}>
       <div className={styles.card}>
         <img src={image} alt="album" className={styles.cardImage} />
         <div className={styles.followsContainer}>
