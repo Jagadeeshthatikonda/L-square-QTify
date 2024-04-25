@@ -18,7 +18,9 @@ const LeftNavigationIcon = () => {
 
   return (
     <div className={styles.moveToLeft}>
-      {!firstCardNotSwiped && <LeftArrow onClick={() => swiper.slidePrev()} />}
+      {firstCardNotSwiped ? null : (
+        <LeftArrow onClick={() => swiper.slidePrev()} />
+      )}
     </div>
   );
 };

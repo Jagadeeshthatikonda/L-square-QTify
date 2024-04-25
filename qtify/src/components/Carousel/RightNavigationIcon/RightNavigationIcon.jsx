@@ -14,9 +14,9 @@ const RightNavigationIcon = () => {
     });
   }, [swiper]);
 
-  return (
+  return lastCardNotSwiped ? null : (
     <div className={styles.moveToRight}>
-      {!lastCardNotSwiped && <RightArrow onClick={() => swiper.slideNext()} />}
+      <RightArrow onClick={() => swiper.slideNext()} />
     </div>
   );
 };
