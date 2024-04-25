@@ -5,5 +5,10 @@
   justify-content: space-between;
   width: 100%;
   height: 74px;
-  padding: 0px 32px;
+  padding: 0px 32px 0px 32px;
+}
+
+.logoStyles {
+  display: flex;
+  margin: 14px;
 }
