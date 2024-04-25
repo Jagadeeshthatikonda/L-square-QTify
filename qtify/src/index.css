@@ -27,3 +27,7 @@ body {
 .swiper-slide {
   width: auto !important;
 }
+
+.swiper-wrapper {
+  display: flex;
+}
