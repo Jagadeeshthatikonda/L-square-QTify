@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const BACKEND_END_POINT = "https://qtify-backend-labs.crio.do";
 
-export const triggerGetTopAlbumsAPI = async () => {
+export const getTopAlbums = async () => {
   try {
     const response = await axios.get(`${BACKEND_END_POINT}/albums/top`);
     return response.data;
@@ -16,7 +16,7 @@ export const triggerGetTopAlbumsAPI = async () => {
   }
 };
 
-export const triggerGetNewAlbumsAPI = async () => {
+export const getNewAlbums = async () => {
   try {
     const response = await axios.get(`${BACKEND_END_POINT}/albums/new`);
     return response.data;

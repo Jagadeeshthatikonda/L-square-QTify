@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero.jsx";
-import {
-  triggerGetTopAlbumsAPI,
-  triggerGetNewAlbumsAPI,
-} from "./apis/apis.js";
+import { getTopAlbums, getNewAlbums } from "./apis/apis.js";
 import Section from "./components/Section/Section.jsx";
 
 function App() {
@@ -14,7 +11,7 @@ function App() {
 
   const getTopAlbumSongs = async () => {
     try {
-      const topAlbumSongs = await triggerGetTopAlbumsAPI();
+      const topAlbumSongs = await getTopAlbums();
       setTopAlbumSongs(topAlbumSongs);
     } catch (error) {
       console.log(error);
@@ -24,7 +21,7 @@ function App() {
 
   const getNewAlbumSongs = async () => {
     try {
-      const newAlbumSongs = await triggerGetNewAlbumsAPI();
+      const newAlbumSongs = await getNewAlbums();
       setNewAlbumSongs(newAlbumSongs);
     } catch (error) {
       console.log(error);
