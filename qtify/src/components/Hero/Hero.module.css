@@ -1,0 +1,26 @@
+.sectionContainer {
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroDescriptionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 48px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.HeroImage {
+  height: 212px;
+  width: 212px;
+}
+
+.HeroTitle > h1 {
+  font-size: 32px;
+  height: 48px;
+}
