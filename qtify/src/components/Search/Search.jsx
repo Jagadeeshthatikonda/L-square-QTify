@@ -1,16 +1,13 @@
 import React from "react";
 
-import SearchIcon from "../Icons/SearchIcon";
+import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
 
-import styles from "./SearchBox.module.css";
+import styles from "./Search.module.css";
 
 const Search = props => {
   return (
     <form className={styles.container}>
-      <input
-        className={styles.searchInput}
-        placeholder={props.placeholderText}
-      />
+      <input className={styles.searchInput} placeholder={props.search} />
       <button className={styles.searchButton} type="submit">
         <SearchIcon />
       </button>
