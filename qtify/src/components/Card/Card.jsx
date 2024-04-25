@@ -6,11 +6,7 @@ const Card = ({ data, type }) => {
   const { image, follows, title, songs, tooltipText } = data;
 
   return (
-    <Tooltip
-      title={tooltipText ? `${tooltipText} songs` : ``}
-      placement="top"
-      arrow
-    >
+    <Tooltip title={title ? `${title} songs` : ``} placement="top" arrow>
       <div className={styles.cardContainer} title={title}>
         <div className={styles.card}>
           <img src={image} alt={title} className={styles.cardImage} />
