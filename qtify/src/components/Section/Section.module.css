@@ -1,18 +1,27 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.cardWrapper{
-    margin-top: 18px;
+.leftTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
 }
-.wrapper{
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
+
+.cardWrapper {
+  margin-top: 18px;
 }
-.toggleText{
-    color: var(--color-primary);
-    cursor: pointer;
+.wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.toggleTextStyles {
+  color: var(--color-primary-400);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
 }

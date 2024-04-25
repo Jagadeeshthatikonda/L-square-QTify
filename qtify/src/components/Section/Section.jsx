@@ -12,10 +12,10 @@ const Section = ({ title, data, type }) => {
   return (
     <div>
       <div className={styles.header}>
-        <h3>{title}</h3>
-        <h4 className={styles.toggleText} onClick={handleToggle}>
+        <p className={styles.leftTitle}>{title}</p>
+        <p className={styles.toggleTextStyles} onClick={handleToggle}>
           {isSectionExpanded ? "Show All" : "Collapse All"}
-        </h4>
+        </p>
       </div>
       <div className={styles.cardWrapper}>
         {!isSectionExpanded ? (
