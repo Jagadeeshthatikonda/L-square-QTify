@@ -40,10 +40,17 @@ function App() {
   return (
     <div className={styles.App}>
       <Navbar />
-      <Hero />
-      <div className={styles.sectionWrapper}>
-        <Section type="album" title="Top Albums" data={topAlbumSongs} />
-        <Section type="album" title="New Albums" data={newAlbumSongs} />
+      <div className={styles.appContent}>
+        <Hero />
+        <div className={styles.sectionWrapper}>
+          <Section type="album" title="Top Albums" data={topAlbumSongs} />
+          <Section
+            type="album"
+            title="New Albums"
+            data={newAlbumSongs}
+            customClassName={styles.newAlbums}
+          />
+        </div>
       </div>
     </div>
   );

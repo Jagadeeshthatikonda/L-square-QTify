@@ -1,0 +1,9 @@
+.moveToRight {
+  cursor: pointer;
+  transform: translateY(-50%);
+  right: 10px;
+  top: 40%;
+  z-index: 10;
+  position: absolute;
+  color: var(--color-white);
+}

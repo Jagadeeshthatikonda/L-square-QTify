@@ -1,10 +1,10 @@
-.header {
+.sectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.leftTitle {
+.sectionTitle {
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
@@ -15,10 +15,10 @@
 }
 .wrapper {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   flex-wrap: wrap;
 }
-.toggleTextStyles {
+.sectionToggleTextStyles {
   color: var(--color-primary-400);
   cursor: pointer;
   font-weight: 600;

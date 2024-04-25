@@ -2,12 +2,48 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionWrapper {
-  padding: 0px 30px 60px;
   display: flex;
   flex-direction: column;
+  padding: 0px 30px 30px;
   gap: 32px;
+}
+
+.swiper-slide {
+  width: fit-content !important;
+}
+
+.appContent {
+  flex-grow: 1;
   overflow-y: scroll;
+}
+
+/* width */
+.appContent ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.appContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  display: block;
+}
+
+/* Handle */
+.appContent::-webkit-scrollbar-thumb {
+  background: #888;
+  display: block;
+}
+
+.newAlbums {
+  margin-top: 32px;
+}
+/* Handle on hover */
+.appContent::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  display: block;
 }
