@@ -15,3 +15,17 @@ export const triggerGetTopAlbumsAPI = async () => {
     return null;
   }
 };
+
+export const triggerGetNewAlbumsAPI = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_END_POINT}/albums/new`);
+    return response.data;
+  } catch (error) {
+    if (error.request) {
+      console.log("Request made but no response is received from the server.");
+    } else {
+      console.log("Error occured while setting up the request");
+    }
+    return null;
+  }
+};
