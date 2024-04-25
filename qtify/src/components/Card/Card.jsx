@@ -6,7 +6,7 @@ const Card = ({ data, type }) => {
   const { image, follows, title, songs } = data;
 
   return (
-    <div className={styles.cardContainer} title={`${songs?.length} songs`}>
+    <div className={styles.cardContainer} title={songs?.length}>
       <div className={styles.card}>
         <img src={image} alt="album" className={styles.cardImage} />
         <div className={styles.followsContainer}>
