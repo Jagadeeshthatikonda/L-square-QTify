@@ -9,8 +9,11 @@
 .sectionWrapper {
   display: flex;
   flex-direction: column;
-  padding: 0px 30px 30px;
   gap: 32px;
+}
+
+.sectionPadding {
+  padding: 0px 30px 30px;
 }
 
 .swiper-slide {
@@ -20,10 +23,11 @@
 .appContent {
   flex-grow: 1;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* width */
-.appContent ::-webkit-scrollbar {
+.appContent::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -39,8 +43,11 @@
   display: block;
 }
 
-.newAlbums {
-  margin-top: 32px;
+.songsAlbum {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid var(--color-primary-400);
+  border-bottom: 1px solid var(--color-primary-400);
 }
 /* Handle on hover */
 .appContent::-webkit-scrollbar-thumb:hover {

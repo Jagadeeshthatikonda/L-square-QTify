@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
 
 const Card = ({ data, type }) => {
-  const { image, follows, title, songs, tooltipText } = data;
+  const { image, follows, title, likes } = data;
 
   return (
     <Tooltip title={title ? `${title} songs` : ``} placement="top" arrow>
@@ -12,7 +12,7 @@ const Card = ({ data, type }) => {
           <img src={image} alt={title} className={styles.cardImage} />
           <div className={styles.followsContainer}>
             <Chip
-              label={`${follows} Follows`}
+              label={follows ? `${follows} Follows` : `${likes} Likes`}
               className={styles.chip}
               size="small"
             />

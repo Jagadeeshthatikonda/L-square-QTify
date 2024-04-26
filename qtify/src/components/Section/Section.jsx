@@ -3,7 +3,14 @@ import styles from "./Section.module.css";
 import Card from "../Card/Card";
 import Carousel from "../Carousel/Carousel";
 
-const Section = ({ title, data, type, customClassName }) => {
+const Section = ({
+  title,
+  data,
+  type,
+  customClassName,
+  renderCustomCardsListHeader,
+  shouldShowExpandAction = true,
+}) => {
   const [isSectionExpanded, setIsSectionExpanded] = useState(true);
 
   const handleSectionToggle = () => {
@@ -13,12 +20,14 @@ const Section = ({ title, data, type, customClassName }) => {
   const renderSectionHeader = () => (
     <div className={styles.sectionHeader}>
       <p className={styles.sectionTitle}>{title}</p>
-      <p
-        className={styles.sectionToggleTextStyles}
-        onClick={handleSectionToggle}
-      >
-        {isSectionExpanded ? "Show All" : "Collapse All"}
-      </p>
+      {shouldShowExpandAction ? (
+        <p
+          className={styles.sectionToggleTextStyles}
+          onClick={handleSectionToggle}
+        >
+          {isSectionExpanded ? "Show All" : "Collapse All"}
+        </p>
+      ) : null}
     </div>
   );
 
@@ -40,6 +49,7 @@ const Section = ({ title, data, type, customClassName }) => {
   return (
     <div className={customClassName}>
       {renderSectionHeader()}
+      {renderCustomCardsListHeader ? renderCustomCardsListHeader() : null}
       <div className={styles.cardWrapper}>
         {!isSectionExpanded
           ? renderCardsWithoutCarousel()
