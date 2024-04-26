@@ -43,21 +43,33 @@ const GenreTabs = ({ genresData, selectedTab, handleSelectedTab }) => {
     };
   };
 
+  const StyledTabs = styled(props => (
+    <Tabs
+      {...props}
+      TabIndicatorProps={{
+        children: <span className="MuiTabs-indicatorSpan" />,
+      }}
+    />
+  ))({
+    "& .MuiTabs-indicator": {
+      display: "flex",
+      justifyContent: "center",
+      backgroundColor: "#34c94b",
+      height: "4px",
+      borderRadius: "2px",
+    },
+  });
+
   const CustomTab = styled(props => <Tab disableRipple {...props} />)(
     ({ theme }) => ({
       textTransform: "none",
-
-      "&.Mui-selected": {
-        height: "4px",
-        borderRadius: "2px",
-      },
     })
   );
 
   return (
     <Box sx={{ width: "100%", marginTop: "16px" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
+        <StyledTabs
           value={selectedTab}
           onChange={handleSelectedTab}
           aria-label="basic tabs"
@@ -70,7 +82,7 @@ const GenreTabs = ({ genresData, selectedTab, handleSelectedTab }) => {
           {genresData.map((genre, index) => (
             <CustomTab label={genre.label} {...tabProps(index)} />
           ))}
-        </Tabs>
+        </StyledTabs>
       </Box>
     </Box>
   );
