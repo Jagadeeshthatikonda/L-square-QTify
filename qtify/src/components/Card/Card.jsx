@@ -3,10 +3,10 @@ import styles from "./Card.module.css";
 import { Chip, Tooltip } from "@mui/material";
 
 const Card = ({ data, type }) => {
-  const { image, follows, title, likes } = data;
-
+  const { image, follows, title, likes, songs } = data;
+  const tooltipText = songs ? `${songs.length} songs` : title;
   return (
-    <Tooltip title={title ? `${title} songs` : ``} placement="top" arrow>
+    <Tooltip title={tooltipText} placement="top" arrow>
       <div className={styles.cardContainer} title={title}>
         <div className={styles.card}>
           <img src={image} alt={title} className={styles.cardImage} />
